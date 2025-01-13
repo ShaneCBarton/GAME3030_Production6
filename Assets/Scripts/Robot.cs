@@ -1,9 +1,10 @@
+using StarterAssets;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class Robot : MonoBehaviour
 {
-    [SerializeField] private Transform target;
+    FirstPersonController player;
     NavMeshAgent agent;
 
     private void Awake()
@@ -13,6 +14,11 @@ public class Robot : MonoBehaviour
 
     private void Start()
     {
-        agent.SetDestination(target.position);
+        player = FindFirstObjectByType<FirstPersonController>();
+    }
+
+    private void Update()
+    {
+        agent.SetDestination(player.transform.position);
     }
 }
