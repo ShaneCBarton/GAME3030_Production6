@@ -1339,6 +1339,7 @@ GameObject:
   - component: {fileID: 1614982949}
   - component: {fileID: 1614982951}
   - component: {fileID: 1614982952}
+  - component: {fileID: 1614982953}
   m_Layer: 7
   m_Name: Robot
   m_TagString: Untagged
@@ -1419,6 +1420,19 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1614982953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1614982948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c26102c3dc5b9794193f7fbeb200f7bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startHealth: 6
 --- !u!1001 &1896287397
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1757,6 +1771,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef55c6428fc1160479a89b3b070cebce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageAmount: 2
 --- !u!1 &2126656986
 GameObject:
   m_ObjectHideFlags: 0
