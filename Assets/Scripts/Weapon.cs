@@ -4,6 +4,7 @@ using StarterAssets;
 public class Weapon : MonoBehaviour
 {
     [SerializeField] private int damageAmount;
+    [SerializeField] private ParticleSystem muzzleFlash;
 
     private StarterAssetsInputs starterAssetInputs;
 
@@ -22,6 +23,8 @@ public class Weapon : MonoBehaviour
     private void HandleShoot()
     {
         if (!starterAssetInputs.shoot) return;
+
+        muzzleFlash.Play();
 
         RaycastHit hit;
 
