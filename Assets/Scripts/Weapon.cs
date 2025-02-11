@@ -3,7 +3,7 @@ using StarterAssets;
 
 public class Weapon : MonoBehaviour
 {
-    [SerializeField] private int damageAmount;
+    [SerializeField] private WeaponSO weaponSO;
     [SerializeField] private ParticleSystem muzzleFlash;
     [SerializeField] private GameObject hitVFXPrefab;
     [SerializeField] private Animator animator;
@@ -37,7 +37,7 @@ public class Weapon : MonoBehaviour
             Instantiate(hitVFXPrefab, hit.point, Quaternion.identity);
 
             EnemyHealth enemyHealth = hit.collider.GetComponent<EnemyHealth>();
-            enemyHealth?.TakeDamage(damageAmount);
+            enemyHealth?.TakeDamage(weaponSO.Damage);
         }
 
     }
