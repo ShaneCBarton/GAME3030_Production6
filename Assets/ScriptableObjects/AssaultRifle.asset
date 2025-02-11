@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c95381b188081ac49bf1b4b6080b376b, type: 3}
   m_Name: AssaultRifle
   m_EditorClassIdentifier: 
+  WeaponPrefab: {fileID: 6723477450075038022, guid: 3cbf6b2be33cbee4fa5e008a3f4c3507, type: 3}
   Damage: 1
   FireRate: 0.2
   hitVFXPrefab: {fileID: 2326242795345768806, guid: 47fb6fc5a9203dc47bae9d63906cea97, type: 3}
