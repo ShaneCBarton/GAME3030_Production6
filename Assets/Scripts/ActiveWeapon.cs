@@ -42,6 +42,9 @@ public class ActiveWeapon : MonoBehaviour
             timeSinceLastShot = 0f;
         }
 
-        starterAssetInputs.ShootInput(false);
+        if (!weaponSO.IsAutomatic)
+        {
+            starterAssetInputs.ShootInput(false);
+        }
     }
 }
