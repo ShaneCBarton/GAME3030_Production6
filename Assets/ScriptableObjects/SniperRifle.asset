@@ -17,3 +17,4 @@ MonoBehaviour:
   FireRate: 1
   hitVFXPrefab: {fileID: 2326242795345768806, guid: 47fb6fc5a9203dc47bae9d63906cea97, type: 3}
   IsAutomatic: 0
+  CanZoom: 1

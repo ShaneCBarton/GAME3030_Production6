@@ -1,5 +1,4 @@
 using StarterAssets;
-using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
 public class ActiveWeapon : MonoBehaviour
@@ -27,12 +26,14 @@ public class ActiveWeapon : MonoBehaviour
 
     private void Update()
     {
-        timeSinceLastShot += Time.deltaTime;
         HandleShoot();
+        HandleZoom();
     }
 
     private void HandleShoot()
     {
+        timeSinceLastShot += Time.deltaTime;
+
         if (!starterAssetInputs.shoot) return;
 
         if (timeSinceLastShot > weaponSO.FireRate)
@@ -58,5 +59,19 @@ public class ActiveWeapon : MonoBehaviour
         Weapon newWeapon = Instantiate(weaponSO.WeaponPrefab, transform).GetComponent<Weapon>();
         currentWeapon = newWeapon;
         this.weaponSO = weaponSO;
+    }
+
+    private void HandleZoom()
+    {
+        if (!weaponSO.CanZoom) { return; }
+
+        if (starterAssetInputs.zoom)
+        {
+            Debug.Log("Zoomin");
+        }
+        else
+        {
+            Debug.Log("Not zoomin");
+        }
     }
 }

@@ -14,6 +14,7 @@ namespace StarterAssets
 		public bool sprint;
 		public bool shoot;
 		public bool quit;
+		public bool zoom;
 
 		[Header("Movement Settings")]
 		public bool analogMovement;
@@ -55,6 +56,11 @@ namespace StarterAssets
 		{
 			QuitInput(value.isPressed);
 		}
+
+		public void OnZoom(InputValue value)
+		{
+			ZoomInput(value.isPressed);
+        }
 #endif
 
 
@@ -87,8 +93,13 @@ namespace StarterAssets
 		{
 			quit = newQuitState;
 		}
-		
-		private void OnApplicationFocus(bool hasFocus)
+
+		public void ZoomInput(bool newZoomState)
+        {
+            zoom = newZoomState;
+        }
+
+        private void OnApplicationFocus(bool hasFocus)
 		{
 			SetCursorState(cursorLocked);
 		}
