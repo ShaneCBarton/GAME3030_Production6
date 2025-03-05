@@ -139,6 +139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startHealth: 3
+  RobotExplosionVFX: {fileID: 1151963379264356709, guid: 0902c91a96551e944a6989ba0cf44dde, type: 3}
 --- !u!95 &912384686807214225
 Animator:
   serializedVersion: 7
