@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 1615774098577353159}
   - component: {fileID: 6158944106263234687}
   - component: {fileID: 601403811405625737}
+  - component: {fileID: 8080858623322965530}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -160,6 +161,7 @@ MonoBehaviour:
   sprint: 0
   shoot: 0
   quit: 0
+  zoom: 0
   analogMovement: 0
   cursorLocked: 1
   cursorInputForLook: 1
@@ -273,6 +275,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9aea7e9f58d11f745beb1e6a82fddf08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8080858623322965530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2051318138692421381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aae0e2e4322de1d44b52f787df835fbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startHealth: 5
 --- !u!1 &5882456687829296270
 GameObject:
   m_ObjectHideFlags: 0
@@ -341,7 +356,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d05c251772842b43a7f100fb3749fe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponSO: {fileID: 11400000, guid: e7040ce159c919c41b16da76042a0881, type: 2}
+  startingWeaponSO: {fileID: 0}
+  playerFollowCamera: {fileID: 0}
+  weaponCamera: {fileID: 0}
+  zoomVignette: {fileID: 0}
+  ammoText: {fileID: 0}
 --- !u!1 &7667755366824736505
 GameObject:
   m_ObjectHideFlags: 0
