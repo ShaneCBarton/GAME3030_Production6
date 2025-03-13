@@ -64,7 +64,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startHealth: 3
-  RobotExplosionVFX: {fileID: 1151963379264356709, guid: 0902c91a96551e944a6989ba0cf44dde, type: 3}
+  explosionVFXPrefab: {fileID: 1151963379264356709, guid: 0902c91a96551e944a6989ba0cf44dde, type: 3}
 --- !u!65 &3825838084078403816
 BoxCollider:
   m_ObjectHideFlags: 0
