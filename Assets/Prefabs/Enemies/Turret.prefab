@@ -63,7 +63,7 @@ MonoBehaviour:
   turretHead: {fileID: 4047500056886389681}
   playerTargetPoint: {fileID: 0}
   projectilePrefab: {fileID: 513777451632934035, guid: 0ca0fb9b07579544fbc1f9edac46e17b, type: 3}
-  projectileSpawnPoint: {fileID: 0}
+  projectileSpawnPoint: {fileID: 3589828642169840965}
   projectileSpawnRate: 2
   damageAmount: 2
 --- !u!1 &3598063832415196265
