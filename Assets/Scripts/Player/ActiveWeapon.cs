@@ -20,6 +20,7 @@ public class ActiveWeapon : MonoBehaviour
     private float defaultRotationSpeed; 
     private int currentAmmo;
     private WeaponSO currentWeaponSO;
+    private AudioSource audioSource;
 
     const string SHOOT_STRING = "Shoot";
 
@@ -30,6 +31,7 @@ public class ActiveWeapon : MonoBehaviour
         animator = GetComponent<Animator>();
         defaultFOV = playerFollowCamera.m_Lens.FieldOfView;
         defaultRotationSpeed = firstPersonController.RotationSpeed;
+        audioSource = GetComponentInParent<AudioSource>();
     }
 
     private void Start()
@@ -66,6 +68,7 @@ public class ActiveWeapon : MonoBehaviour
         {
             currentWeapon.Shoot(currentWeaponSO);
             animator.Play(SHOOT_STRING, 0, 0f);
+            audioSource?.PlayOneShot(currentWeaponSO.ShootSound);
             timeSinceLastShot = 0f;
             AdjustAmmo(-1);
         }

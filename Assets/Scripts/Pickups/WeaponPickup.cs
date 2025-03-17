@@ -6,6 +6,7 @@ public class WeaponPickup : Pickup
 
     protected override void OnPickup(ActiveWeapon activeWeapon)
     {
+        audioSource?.PlayOneShot(weaponClip);
         activeWeapon.SwitchWeapon(weaponSO);
     }
 }

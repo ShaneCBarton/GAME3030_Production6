@@ -1,10 +1,20 @@
+using System.Collections;
 using UnityEngine;
 
 public abstract class Pickup : MonoBehaviour
 {
     [SerializeField] private float rotationSpeed = 100f;
+    [SerializeField] protected AudioClip ammoClip;
+    [SerializeField] protected AudioClip weaponClip;
 
     private const string PLAYER_STRING = "Player";
+
+    protected AudioSource audioSource;
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     private void Update()
     {
@@ -17,8 +27,14 @@ public abstract class Pickup : MonoBehaviour
         {
             ActiveWeapon activeWeapon = other.GetComponentInChildren<ActiveWeapon>();
             OnPickup(activeWeapon);
-            Destroy(gameObject);
+            StartCoroutine(DestroyAfterSound());
         }
+    }
+
+    private IEnumerator DestroyAfterSound()
+    {
+        yield return new WaitWhile(() => audioSource.isPlaying);
+        Destroy(gameObject);
     }
 
     protected abstract void OnPickup(ActiveWeapon activeWeapon);

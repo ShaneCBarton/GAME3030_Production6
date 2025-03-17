@@ -21,3 +21,4 @@ MonoBehaviour:
   ZoomAmount: 10
   ZoomRotationSpeed: 0.3
   MagazineSize: 8
+  ShootSound: {fileID: 8300000, guid: 0319b7b490806324987045f678d66afa, type: 3}

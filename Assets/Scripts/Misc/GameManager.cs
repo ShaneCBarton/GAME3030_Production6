@@ -1,3 +1,4 @@
+using StarterAssets;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -18,6 +19,10 @@ public class GameManager : MonoBehaviour
         if (enemiesLeft <= 0)
         {
             youWinText.SetActive(true);
+            StarterAssetsInputs SAI = FindFirstObjectByType<StarterAssetsInputs>();
+            SAI.SetCursorState(false);
+            PlayerHealth player = FindFirstObjectByType<PlayerHealth>();
+            player.DestroyPlayer();
         }
     }
 

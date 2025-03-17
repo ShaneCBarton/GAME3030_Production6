@@ -39,7 +39,7 @@ public class PlayerHealth : MonoBehaviour
         gameoverContainer.SetActive(true);
         StarterAssetsInputs SAI = FindFirstObjectByType<StarterAssetsInputs>();     
         SAI.SetCursorState(false);
-        Destroy(gameObject);
+        DestroyPlayer();
     }
 
     private void AdjustShieldUI()
@@ -55,5 +55,10 @@ public class PlayerHealth : MonoBehaviour
                 shieldBars[i].gameObject.SetActive(false);
             }
         }
+    }
+
+    public void DestroyPlayer()
+    {
+        Destroy(gameObject);
     }
 }
