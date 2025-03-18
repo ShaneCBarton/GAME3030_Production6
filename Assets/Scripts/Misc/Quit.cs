@@ -1,26 +1,15 @@
-using StarterAssets;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Quit : MonoBehaviour
 {
-
-    private StarterAssetsInputs starterAssetsInputs;
-
-    private void Awake()
+    public void HandleQuit()
     {
-        starterAssetsInputs = GetComponent<StarterAssetsInputs>();
+        Application.Quit();
     }
 
-    private void Update()
+    public void Begin()
     {
-        HandleQuit();
-    }
-
-    private void HandleQuit()
-    {
-        if (starterAssetsInputs.quit)
-        {
-            Application.Quit();
-        }
+        SceneManager.LoadScene(1);
     }
 }
